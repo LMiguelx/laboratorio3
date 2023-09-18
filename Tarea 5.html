@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Casa de Cambio</title>
+</head>
+
+<body>
+    <h1>Casa de Cambio</h1>
+    <form>
+        <label for="monedaOriginal">Selecciona la moneda original:</label>
+        <select id="monedaOriginal" name="monedaOriginal">
+            <option value="dolar">Dólar</option>
+            <option value="soles">Soles</option>
+            <option value="euros">Euros</option>
+        </select>
+
+        <br>
+
+        <label for="monedaDestino">Selecciona la moneda de destino:</label>
+        <select id="monedaDestino" name="monedaDestino">
+            <option value="dolar">Dólar</option>
+            <option value="soles">Soles</option>
+            <option value="euros">Euros</option>
+        </select>
+
+        <br>
+
+        <label for="monto">Ingresa el monto a cambiar:</label>
+        <input type="number" id="monto" name="monto" step="0.01" min="0">
+
+        <br>
+
+        <input type="button" value="Calcular" onclick="calcularCambio()">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcularCambio() {
+            const monedaOriginal = document.getElementById("monedaOriginal").value;
+            const monedaDestino = document.getElementById("monedaDestino").value;
+            const monto = parseFloat(document.getElementById("monto").value);
+            let tasaCambio = 0; // Aquí debes establecer la tasa de cambio adecuada
+
+            // Aquí debes calcular el total a recibir y el cambio según la tasa de cambio
+            // Puedes usar estructuras condicionales (if, switch) para determinar la tasa correcta.
+
+            const totalRecibir = monto * tasaCambio;
+            const cambio = totalRecibir - monto;
+
+            // Mostrar el resultado en el elemento "resultado"
+            const resultadoElement = document.getElementById("resultado");
+            resultadoElement.innerHTML = `
+                Total a recibir: ${totalRecibir} ${monedaDestino} <br>
+                Cambio: ${cambio} ${monedaOriginal}
+            `;
+        }
+    </script>
+</body>
+
+</html>
