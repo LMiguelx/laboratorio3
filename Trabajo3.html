@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Presentación Personal</title>
+    <style>
+    body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fae5ad;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border: 5px solid #555;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+    h1 {
+        color: #e0d3d3;
+    }
+    h2 {
+        color: #333;
+        margin-top: 20px;
+        color: #007BFF; 
+    }
+    p , li{
+        font-family:cursive;
+        color: #555;
+    }
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Presentación Personal</h1>
+    </header>
+    <div class="container">
+
+        <button id="toggleInfo">Mostrar/ocultar Presentación Personal</button>
+
+        <div id="personalInfo" style="display: none;">
+            <h2>Fotografía o Avatar</h2>
+            <img src="foto0001.jpg" alt="Mi Fotografía">
+            
+            <h2>Presentación personal</h2>
+            <p>Hola, me llamo Luis Miguel Quispe Hancco.</p>
+            
+            <h2>Sobre Mí</h2>
+            <p>Me apasiona la programación, los videojuegos y la música. En mi tiempo libre, disfruto jugando al fútbol y leyendo libros de ciencia ficción.</p>
+            
+            <h2>Tecnologías y Lenguajes de Programación</h2>
+            <p>Me gustaría especializarme en el desarrollo web utilizando HTML, CSS y JavaScript. También me gustaría tener conocimientos de algún lenguaje de programación como Java o Python.</p>
+            
+            <h2>Formación Profesional</h2>
+            <p>Acabé mi primaria y secundaria en el colegio "Mercedario". Además, actualmente estoy estudiando la carrera de diseño y desarrollo de software en la institución "TECSUP".</p>
+            
+            <h2>Idiomas</h2>
+            <p>Hablo español y tengo un buen nivel de inglés.</p>
+            
+            <h2>Intereses</h2>
+            <ul>
+                <li>Desarrollo web</li>
+                <li>Videojuegos</li>
+                <li>Música</li>
+                <li>Fútbol</li>
+                <li>Ciencia ficción</li>
+            </ul>
+            
+            <h2>Adicionales</h2>
+            <p>Cumpleaños: 15 de octubre 2004</p>
+            <p>Teléfono: 993957899</p>
+        </div>
+    </div>
+
+    <script>
+    const toggleButton = document.getElementById('toggleInfo');
+    const personalInfo = document.getElementById('personalInfo');
+
+    toggleButton.addEventListener('click', function() {
+        if (personalInfo.style.display === 'none' || personalInfo.style.display === '') {
+            personalInfo.style.display = 'block';
+            toggleButton.textContent = 'Ocultar Presentación Personal';
+        } else {
+            personalInfo.style.display = 'none';
+            toggleButton.textContent = 'Mostrar Presentación Personal';
+        }
+    });
+    </script>
+</body>
+</html>
